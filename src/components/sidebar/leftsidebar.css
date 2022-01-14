@@ -1,0 +1,49 @@
+.leftsidebar{
+    flex:2;
+    margin: 10px;
+    padding-bottom:20px ; 
+    background-color: rgb(224, 242, 250);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+   position: sticky;
+    
+ }
+ .leftsidebarTitle{
+    margin: 10px;
+    padding: 5px;
+    width:80%;
+    border-top: 1px solid rgb(52, 55, 71);
+      display: flex;
+    border-bottom: 1px solid rgb(52, 55, 71);
+    
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
+    color: rgb(64, 69, 99);
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    justify-content: center;
+ 
+ }
+
+ .leftsidebarList{
+    list-style: none;
+     margin-bottom: 10px;
+
+    
+  }
+
+  .item{
+      display: flex;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 22px;
+   margin-right: 10px;
+    cursor: pointer;
+    margin-top: 28px;
+  margin-right: 18px;
+justify-content: center;
+color: rgb(40, 64, 83);
+ }
