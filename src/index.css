@@ -1,0 +1,13 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+body {
+    background-color: #dacbff;
+}
+
+* {
+   
+    /* font-family: 'Voltaire', sans-serif;  */
+}

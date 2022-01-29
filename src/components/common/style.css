@@ -1,0 +1,25 @@
+/* .articles{
+     font-weight: bolder;
+     font-size: 27px;
+     font-family: 'Teko', sans-serif;
+     color: rgb(84, 62, 126);
+}
+.video{
+     font-weight: bolder;
+     font-size: 27px;
+     font-family: 'Teko', sans-serif;
+     color: rgb(84, 62, 126);
+} */
+.home{
+     font-weight: bolder;
+     font-size: 27px;
+     font-family: 'Open Sans Condensed', sans-serif;
+     color: rgb(84, 62, 126);
+}
+.side{
+     border-radius: 20px;
+     background-color: rgb(247, 238, 255);
+     display: flex;
+     width:220px;
+     height: 350px;
+}

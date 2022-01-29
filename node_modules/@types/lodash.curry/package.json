@@ -1,0 +1,36 @@
+{
+    "name": "@types/lodash.curry",
+    "version": "4.1.6",
+    "description": "TypeScript definitions for lodash.curry",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Brian Zengel",
+            "url": "https://github.com/bczengel",
+            "githubUsername": "bczengel"
+        },
+        {
+            "name": "Ilya Mochalov",
+            "url": "https://github.com/chrootsu",
+            "githubUsername": "chrootsu"
+        },
+        {
+            "name": "Stepan Mikhaylyuk",
+            "url": "https://github.com/stepancar",
+            "githubUsername": "stepancar"
+        }
+    ],
+    "main": "",
+    "types": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/lodash.curry"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/lodash": "*"
+    },
+    "typesPublisherContentHash": "35c4a8bc0f694a1da460a7eb786ba6f3344ed03ef8567e72fe853fa43273c0d6",
+    "typeScriptVersion": "2.8"
+}
