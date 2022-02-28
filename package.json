@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@adminjs/express": "^4.0.1",
+    "admin-bro": "^4.0.1",
+    "admin-bro-expressjs": "^2.1.1",
+    "adminjs": "^5.5.1"
+  }
+}
