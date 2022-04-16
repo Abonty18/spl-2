@@ -10,9 +10,11 @@ const Posts = ({ setCurrentId }) => {
   const classes = useStyles();
   const theme = createMuiTheme({
 
-    typography: {
+    typography: {fontSize: 14,
       fontFamily: [
-        'Fresca', 
+      
+
+      'Fira Sans Condensed', 
       'sans-serif'
       ].join(','),
     }

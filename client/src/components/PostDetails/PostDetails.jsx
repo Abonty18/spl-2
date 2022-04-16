@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Paper, Typography, CircularProgress, Divider, createMuiTheme, ThemeProvider } from '@material-ui/core/';
+import {Card, Paper, Typography, CircularProgress, Divider, createMuiTheme, ThemeProvider } from '@material-ui/core/';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { Redirect,useParams, useHistory, Link } from 'react-router-dom';
@@ -16,10 +16,10 @@ const Post = () => {
   const { id } = useParams();
   const user = JSON.parse(localStorage.getItem('profile'));
   const theme=createMuiTheme({
-    typography:{
+    typography:{fontSize: 13,
      fontFamily: [
-     'Ubuntu Condensed',
-     'sans-serif'
+      'Fira Sans Condensed', 
+      'sans-serif'
      ].join(','),
     }
  
@@ -88,13 +88,14 @@ const Post = () => {
           <Divider />
           <div className={classes.recommendedPosts}>
             {recommendedPosts.map(({ title, name, message, likes, selectedFile, _id }) => (
-              <div style={{ margin: '20px', cursor: 'pointer' }} onClick={() => openPost(_id)} key={_id}>
+              <Card className={classes.rposts}style={{ margin: '20px', cursor: 'pointer' }} onClick={() => openPost(_id)} key={_id}>
                 <Typography gutterBottom variant="h6">{title}</Typography>
                 <Typography gutterBottom variant="subtitle2">{name}</Typography>
-                <Typography gutterBottom variant="subtitle2">{message}</Typography>
+                <Typography gutterBottom variant="subtitle2" style={{ wordWrap: "break-word" }}>{message.split(' ').splice(0, 10).join(' ')} ...</Typography>
+                
                 <Typography gutterBottom variant="subtitle1">Likes: {likes.length}</Typography>
                 <img src={selectedFile} width="200px" />
-              </div>
+              </Card>
             ))}
           </div>
         </div>

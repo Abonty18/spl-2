@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Typography, Toolbar, Avatar, Button ,createMuiTheme, ThemeProvider  } from '@material-ui/core';
+import { AppBar, Typography, Toolbar, Avatar, Button ,createMuiTheme, ThemeProvider, IconButton  } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
 
 
-import hobbyists from '../../images/hobbyists.png';
-import quiz from '../../images/quiz.png';
-import videos from '../../images/videos.png';
-import vidres from '../../images/vidres.png';
 
 
 import * as actionType from '../../constants/actionTypes';
@@ -25,10 +21,9 @@ const Navbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
   const theme=createMuiTheme({
-  
-    typography:{
+    typography:{fontSize: 13,
      fontFamily: [
-      'Fresca', 
+      'Roboto Condensed', 
       'sans-serif'
      ].join(','),
     }
@@ -69,6 +64,10 @@ const Navbar = () => {
         {/* <img className={classes.hobbyists} component={Link} to="/" src={hobbyists} alt="icon" height="20px" /> */}
         <h2 className={classes.hobbyists} fontWeight='bolder'>Hobbyists</h2>
       </Link>
+      <Link to="/blogs" className={classes.brandContainer}>
+        {/* <img className={classes.hobbyists} component={Link} to="/" src={hobbyists} alt="icon" height="20px" /> */}
+        <h2 className={classes.hobbyists} fontWeight='bolder'>blogs</h2>
+      </Link>
 
       <Link to="/QuizHome" className={classes.brandContainer}>
         {/* <img className={classes.quiz} component={Link} to="/QuizHome" src={quiz} alt="icon" height="40px" /> */}
@@ -83,7 +82,7 @@ const Navbar = () => {
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>
-            <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+           <IconButton><Avatar className={classes.purple} onClick={logout} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar></IconButton> 
             <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
             <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
           </div>

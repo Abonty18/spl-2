@@ -1,7 +1,7 @@
 .content {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(243, 236, 255);
+  background-color: rgb(255, 255, 255);
   border-radius: 30px;
 }
 

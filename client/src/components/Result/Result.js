@@ -19,6 +19,7 @@ const Result = ({ score }) => {
     <>
     <div className="result">
       <span className="title">Final Score : {score}</span>
+      <div className='buttons'>
       <Button className='btn'
         variant="contained"
         color="primary"
@@ -29,6 +30,18 @@ const Result = ({ score }) => {
       >
         Go to homepage
       </Button>
+
+      <Button className='btn'
+        variant="contained"
+        color="primary"
+        
+        size="large"
+        style={{ alignSelf: "center", marginTop: 20,borderRadius:'25px', height:'6vh'   }}
+        href="/QuizHome"
+      >
+        Play Again
+      </Button>
+      </div>
     </div>
     {/* <img src={result} className="resultimg" alt="quiz app" /> */}
     <span className="resultimg"><img src={result2}  alt="quiz app" />

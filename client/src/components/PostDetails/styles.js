@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   main:{
-    backgroundColor:'#f0eaff',
+    backgroundColor:'#ffffff',
   },
   media: {
     
@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     flex: 1,
   },
   imageSection: {
-    marginLeft: '20px',
+    marginLeft: '15px',
     [theme.breakpoints.down('sm')]: {
       marginLeft: 0,
     },
@@ -40,6 +40,18 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
+  },
+  rposts: {
+    backgroundColor:'F6FCFF',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    borderRadius: '15px',
+    height: '50vm',
+    position: 'relative',
+    wordWrap:'break-word',
+    width:'18%',
+    padding: '20px',
   },
   loadingPaper: {
     backgroundColor: '#ebe4ff',

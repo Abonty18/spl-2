@@ -20,7 +20,7 @@ const dashboard = [
   {
     id: 4,
     name: 'Happy Gardening',
-    webPreviewUrl: 'https://www.youtube.com/watch?v=abpiG8ppxCU&list=PLvE-WOB38X7Z8mAiNYyqcldMQQZCnz5o7',
+    webPreviewUrl: 'https://www.youtube.com/watch?v=8JwLnl-6l_g&list=PL_YKZKVmyNHg-ZXilkq_ya7EfrhFFr3p2',
   },
   {
     id: 5,
@@ -31,7 +31,7 @@ const dashboard = [
   {
     id: 6,
     name: 'Arts and crafts',
-    webPreviewUrl: 'https://www.youtube.com/watch?v=jnTL4c9fgeM&list=PLkc5kS6oh1_nv5ziCiR_wPcrNOy9r4VsE',
+    webPreviewUrl: 'https://www.youtube.com/watch?v=vPrNuk_U0LI&list=PLKEme8ErY6Vwx6QNj7NLj2Rb5Igaxb2MQ',
   },
 ];
 module.exports = dashboard;

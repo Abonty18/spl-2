@@ -7,14 +7,14 @@ import ChipInput from 'material-ui-chip-input';
 import { getPostsBySearch } from '../../actions/posts';
 import Posts from '../Posts/Posts';
 import QuizHome from '../QuizHome/QuizHome'
-// import Form from '../Form/Form';
+ import Form from '../Form/Form';
 import Pagination from '../Pagination';
 import useStyles from './styles';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
-const Home = () => {
+const Blogs = () => {
   const classes = useStyles();
   const query = useQuery();
   const page = query.get('page') || 1;
@@ -78,7 +78,7 @@ const Home = () => {
               />
               <Button onClick={searchPost} className={classes.searchButton} variant="contained" color="primary">Search</Button>
             </AppBar>
-            {/* <Form currentId={currentId} setCurrentId={setCurrentId} /> */}
+             <Form currentId={currentId} setCurrentId={setCurrentId} /> 
             {(!searchQuery && !tags.length) && (
               <Paper className={classes.pagination} elevation={6}>
                 <Pagination page={page} />
@@ -93,4 +93,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Blogs;

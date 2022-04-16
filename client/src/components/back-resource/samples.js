@@ -17,6 +17,19 @@ const infrastructure = [
     link: 'https://www.resurgence.org/magazine/article3216-the-power-of-arts-and-crafts.html',
     cover: 'https://media.istockphoto.com/photos/art-equipment-picture-id538478165?s=2048x2048',
   },
+  {
+    id: 4,
+    name: 'Cooking',
+    link: 'https://influencermarketinghub.com/best-food-blogs/',
+    cover: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg',
+  },
+  {
+    id: 5,
+    name: 'Singing',
+    link: 'https://blog.feedspot.com/singing_blogs/',
+    cover: 'https://media.istockphoto.com/photos/karaoke-microphone-close-up-picture-id1190896641',
+  },
+
 ];
 
 module.exports = infrastructure;

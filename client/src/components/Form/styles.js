@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     
   },
   paper: {
-    backgroundColor:'#f6f2ff',
+    backgroundColor:'#ffffff',
     padding: theme.spacing(2),
     borderRadius:'20px'
   },
