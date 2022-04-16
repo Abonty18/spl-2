@@ -62,11 +62,11 @@ const Navbar = () => {
 
       <Link to="/" className={classes.brandContainer}>
         {/* <img className={classes.hobbyists} component={Link} to="/" src={hobbyists} alt="icon" height="20px" /> */}
-        <h2 className={classes.hobbyists} fontWeight='bolder'>Hobbyists</h2>
+        <h2 className={classes.hobbyists} fontWeight='bolder'>Blogs</h2>
       </Link>
       <Link to="/blogs" className={classes.brandContainer}>
         {/* <img className={classes.hobbyists} component={Link} to="/" src={hobbyists} alt="icon" height="20px" /> */}
-        <h2 className={classes.hobbyists} fontWeight='bolder'>blogs</h2>
+        <h2 className={classes.hobbyists} fontWeight='bolder'>Publish</h2>
       </Link>
 
       <Link to="/QuizHome" className={classes.brandContainer}>

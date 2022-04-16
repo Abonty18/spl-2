@@ -12,12 +12,23 @@ export default makeStyles((theme) => ({
   paper: {
     backgroundColor:'#ffffff',
     padding: theme.spacing(2),
-    borderRadius:'20px'
+    borderRadius:'20px',
+    width:'90vh',
+    height:'70vh'
   },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    
+    
+  },
+  message: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    
+    height:'190vh'
     
     
   },
