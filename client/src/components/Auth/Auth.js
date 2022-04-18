@@ -4,7 +4,7 @@ import { Button, Paper, Grid, Typography, Container, createMuiTheme, ThemeProvid
 import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 
-
+import axios from "axios";
 
 import Icon from './icon';
 import signinl from '../../images/signin.gif';
@@ -26,7 +26,7 @@ const SignUp = () => {
   const classes = useStyles();
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-
+  const [msg, setMsg] = useState("");
   const handleShowPassword = () => setShowPassword(!showPassword);
 
 
@@ -41,10 +41,10 @@ const SignUp = () => {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-  
-
+   
+   
 
     if (isSignup) {
       dispatch(signup(form, history));

@@ -18,7 +18,7 @@ const Post = () => {
   const theme=createMuiTheme({
     typography:{fontSize: 13,
      fontFamily: [
-      'Fira Sans Condensed', 
+      'Roboto Condensed', 
       'sans-serif'
      ].join(','),
     }

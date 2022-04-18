@@ -13,7 +13,7 @@ const Quiz = ({  questions, score, setScore, setQuestions }) => {
   
     typography:{
      fontFamily: [
-      'Fresca', 
+      'Roboto Condensed', 
       'sans-serif'
      ].join(','),
     }

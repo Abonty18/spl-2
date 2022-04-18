@@ -8,7 +8,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import PostDetails from './components/PostDetails/PostDetails';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
-import Blogs from './components/Blogs/Blogs';
+import Blogs from './components/blogs/Blogs';
 import Auth from './components/Auth/Auth';
 import CreatorOrTag from './components/CreatorOrTag/CreatorOrTag';
 

@@ -14,12 +14,20 @@ export default makeStyles((theme) => ({
     padding: theme.spacing(2),
     borderRadius:'20px',
     width:'90vh',
-    height:'70vh'
+    height:'95vh'
+  },
+  paper1: {
+    backgroundColor:'#ffffff',
+    padding: theme.spacing(2),
+    borderRadius:'20px',
+    width:'90vh',
+    height:'9.5vh'
   },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    height:'90vh'
     
     
   },
@@ -47,14 +55,15 @@ export default makeStyles((theme) => ({
       },
     marginBottom: '8px',
     borderRadius:'20px',
-    padding:'5px'
+    padding:'5px',
+    height:'7vh'
   },
   clear: {
     marginBottom: 10,
     borderRadius:'20px',
     padding:'7px',
     backgroundColor:'#fc727e',
-
+    height:'7vh',
     '&:hover': {
       backgroundColor: '#e95460',
       },

@@ -8,7 +8,8 @@ export default makeStyles((theme) => ({
   banner: {
     height: '55%',
     alignSelf:'center',
-    padding: '0px'
+    padding: '0px',
+    overflow:'hidden'
   },
 
  

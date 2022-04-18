@@ -35,7 +35,7 @@ const Blogs = () => {
 
   return (
    <ThemeProvider theme={theme}>
-   <div>
+   <div style={{overflow:'hidden'}}>
     <Grow in  >
       <Container maxWidth="xl">
         <Grid container justify="space-between" direction="row" alignItems="stretch" spacing={3} className={classes.gridContainer}>
@@ -46,7 +46,7 @@ const Blogs = () => {
              </div>
            
           </Grid>
-          <img  src={blog} className="banner" alt="quiz app"  height="5px" width='5px'/>
+          <img  src={blog} className="banner" alt="quiz app"  height="10px" width='100px'/>
         </Grid>
       </Container>
      

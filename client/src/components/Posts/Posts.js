@@ -14,7 +14,7 @@ const Posts = ({ setCurrentId }) => {
       fontFamily: [
       
 
-      'Fira Sans Condensed', 
+      'Roboto Condensed', 
       'sans-serif'
       ].join(','),
     }

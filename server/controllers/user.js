@@ -24,6 +24,8 @@ export const signin = async (req, res) => {
     res.status(500).json({ message: "Something went wrong" });
   }
 };
+// const UserOTPVerification=require("./../models/UserOTPVerification");
+
 
 export const signup = async (req, res) => {
   const { email, password, firstName, lastName } = req.body;

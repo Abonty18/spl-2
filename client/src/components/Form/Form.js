@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 import { useHistory } from 'react-router-dom';
 import ChipInput from 'material-ui-chip-input';
-
+import blog from '../../images/loginplz.svg';
 
 import { createPost, updatePost } from '../../actions/posts';
 import useStyles from './styles';
@@ -51,10 +51,12 @@ const Form = ({ currentId, setCurrentId }) => {
   if (!user?.result?.name) {
     return (
       <ThemeProvider theme={theme}>
-      <Paper className={classes.paper} elevation={6}>
+      <Paper className={classes.paper1} elevation={6}>
         <Typography variant="h6" align="center" >
           Please Sign In to explore more features!
         </Typography>
+        <img  src={blog} className="banner" alt="quiz app" padding='100px' height="100vh" width='100vh'/>
+
       </Paper>
       </ThemeProvider>
     );
