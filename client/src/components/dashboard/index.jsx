@@ -1,11 +1,15 @@
 import React from 'react';
 import Sidebar from '../common/Sidebar';
-import { Grid, CircularProgress,createMuiTheme, ThemeProvider  } from '@material-ui/core';
+import { Grid, CircularProgress,createMuiTheme,Paper,Typography,  ThemeProvider  } from '@material-ui/core';
 import Card from '../common/Card';
 import samples from './samples';
 import { useState } from "react";
 import { Redirect,useParams, useHistory, Link } from 'react-router-dom';
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import useStyles from './styles';
+import blog from '../../images/loginplz.svg';
+
+
 const theme=createMuiTheme({
   typography:{fontSize: 13,
    fontFamily: [
@@ -15,12 +19,24 @@ const theme=createMuiTheme({
   }
 
 });
+
 const Dashboard = () => {
   const [error, setError] = useState(false);
   const history = useHistory();
   const user = JSON.parse(localStorage.getItem('profile'));
-  if (!user) {
-    return <Redirect to="/auth" />
+  if (!user?.result?.name) {
+    return (
+      <ThemeProvider theme={theme}>
+      
+      <Paper className='paper1' elevation={6}>
+        <Typography variant="h6" align="center">
+          Please Sign In to explore more features!
+        </Typography>
+        <img  src={blog} className="banner" alt="quiz app" padding='100px' height="100vh" width='100vh'/>
+
+      </Paper>
+      </ThemeProvider>
+    );
   }
   const handleSubmit = () => {
     if (!user ) {

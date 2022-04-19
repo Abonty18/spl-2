@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, CircularProgress,createMuiTheme, ThemeProvider  } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-
+import blog from '../../images/Blogging (3).gif';
 import Post from './Post/Post';
 import useStyles from './styles';
 
@@ -21,8 +21,8 @@ const Posts = ({ setCurrentId }) => {
 
   });
 
-  if (!posts.length && !isLoading) return 'No posts';
-
+  if (!posts.length && !isLoading) return 'No posts to show :(';
+ 
   return (
    
     isLoading ? <CircularProgress /> : (

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Typography, Toolbar, Avatar, Button ,createMuiTheme, ThemeProvider, IconButton  } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+
+import { useDispatch, useSelector } from 'react-redux';
 import decode from 'jwt-decode';
 
 
@@ -12,6 +13,7 @@ import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
 
 const Navbar = () => {
+  const { post, posts, isLoading } = useSelector((state) => state.posts);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();
   const location = useLocation();
@@ -60,17 +62,23 @@ const Navbar = () => {
 
 
 
-      <Link to="/" className={classes.brandContainer}>
-        {/* <img className={classes.hobbyists} component={Link} to="/" src={hobbyists} alt="icon" height="20px" /> */}
-        <h2 className={classes.hobbyists} fontWeight='bolder'>Blogs</h2>
+      <Link to="/search" className={classes.brandContainer}>
+        
+        <h2 className={classes.hobbyists} fontWeight='bolder'>Search Blogs</h2>
+      </Link>
+
+      
+      <Link to="/posts" className={classes.brandContainer}>
+        
+        <h2 className={classes.quiz}>All Blogs</h2>
       </Link>
       <Link to="/blogs" className={classes.brandContainer}>
-        {/* <img className={classes.hobbyists} component={Link} to="/" src={hobbyists} alt="icon" height="20px" /> */}
-        <h2 className={classes.hobbyists} fontWeight='bolder'>Publish</h2>
+        
+        <h2 className={classes.hobbyists} fontWeight='bolder'>Publish Blogs</h2>
       </Link>
 
       <Link to="/QuizHome" className={classes.brandContainer}>
-        {/* <img className={classes.quiz} component={Link} to="/QuizHome" src={quiz} alt="icon" height="40px" /> */}
+        
         <h2 className={classes.quiz}>QuizTime</h2>
       </Link>
 
@@ -82,8 +90,17 @@ const Navbar = () => {
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>
-           <IconButton><Avatar className={classes.purple} onClick={logout} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar></IconButton> 
+
+
+
+        
+
+
+
+
+          <IconButton><Avatar className={classes.purple} onClick={logout} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar></IconButton> 
             <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
+           
             <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
           </div>
         ) : (

@@ -17,6 +17,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column-reverse',
     },
+    padding:'9px 9px 1px 1px'
     
   },
 }));

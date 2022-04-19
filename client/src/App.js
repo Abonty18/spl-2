@@ -9,6 +9,7 @@ import PostDetails from './components/PostDetails/PostDetails';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Blogs from './components/blogs/Blogs';
+import Landing from './components/Landing/Landing';
 import Auth from './components/Auth/Auth';
 import CreatorOrTag from './components/CreatorOrTag/CreatorOrTag';
 
@@ -56,10 +57,10 @@ const App = () => {
       <Container maxWidth="xl">
         <Navbar />
         <Switch>
-        <Route path="/" exact component={() => <Redirect to="/posts" />} />
+        <Route path="/" exact component={() => <Redirect to="/search" />} />
           <Route path="/posts" exact component={Home} />
           <Route path="/posts/search" exact component={Home} />
-          {/* <Route path="/blogs" exact component={Form} /> */}
+         
           <Route path="/QuizHome" > 
             <QuizHome
               name={name}
@@ -84,6 +85,8 @@ const App = () => {
           <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
           <Route path="/Dashboard"><Dashboard /></Route>
 
+          <Route  path="/search"><Landing /></Route>
+
       <Route  path="/frontend-resource" ><FrontendResource /></Route>
       <Route  path="/backend-resource" ><BackendResource /></Route>
       <Route  path="/infrastructure-resource" ><Infrastructure/></Route>
@@ -92,7 +95,7 @@ const App = () => {
       
      
       <Route  path="/backend-video" ><BackendVideo/></Route>
-          <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
+          <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/search" />)} />
         </Switch>
       </Container>
     </BrowserRouter>

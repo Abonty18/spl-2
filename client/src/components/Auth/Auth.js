@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Paper, Grid, Typography, Container, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
+
 import { GoogleLogin } from 'react-google-login';
 
 import axios from "axios";
@@ -12,7 +13,6 @@ import { signin, signup } from '../../actions/auth';
 import { AUTH } from '../../constants/actionTypes';
 import useStyles from './styles';
 import Input from './Input';
-import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
@@ -56,6 +56,8 @@ const SignUp = () => {
     }
   };
 
+ 
+
   const googleSuccess = async (res) => {
     const result = res?.profileObj;
     const token = res?.tokenId;
@@ -66,6 +68,7 @@ const SignUp = () => {
       history.push('/');
 
     } catch (error) {
+      setError(true);
       console.log(error);
 
 
@@ -91,7 +94,7 @@ const SignUp = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs" >
-      {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+     
         <Paper className={classes.paper} elevation={6}>
           <img className={classes.avatar} src={signinl} alt="icon" height="100px" width='100px' />
           <Typography component="h1" variant="h5">{isSignup ? 'Sign up' : 'Sign in'}</Typography>

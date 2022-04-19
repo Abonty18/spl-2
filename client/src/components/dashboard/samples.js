@@ -33,5 +33,28 @@ const dashboard = [
     name: 'Arts and crafts',
     webPreviewUrl: 'https://www.youtube.com/watch?v=vPrNuk_U0LI&list=PLKEme8ErY6Vwx6QNj7NLj2Rb5Igaxb2MQ',
   },
+  {
+    id: 4,
+    name: 'Cooking',
+    link: 'https://influencermarketinghub.com/best-food-blogs/',
+    cover: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg',
+  },
+  {
+    id: 5,
+    name: 'Singing',
+    link: 'https://blog.feedspot.com/singing_blogs/',
+    cover: 'https://media.istockphoto.com/photos/karaoke-microphone-close-up-picture-id1190896641',
+  },
+  {
+    id: 4,
+    name: 'Cooking',
+    webPreviewUrl: 'https://www.youtube.com/watch?v=ZJuJ9F0G02A&list=PLTzMGnJjrsSyGvV87-ux922n2GXyeDsRo',
+  },
+  {
+    id: 5,
+    name: 'Singing',
+    webPreviewUrl: 'https://www.youtube.com/watch?v=mbjpiU7MrDc&list=PL50v7POCJEWmOxWTNeqIol26OQ1lB5OKY',
+  },
+
 ];
 module.exports = dashboard;

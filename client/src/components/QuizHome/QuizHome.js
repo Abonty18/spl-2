@@ -1,18 +1,19 @@
 import React from 'react';
-import { Button, MenuItem, TextField,createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { Button, MenuItem, TextField,createMuiTheme,Paper,Typography, ThemeProvider } from "@material-ui/core";
 import { useState } from "react";
 import { Redirect,useParams, useHistory, Link } from 'react-router-dom';
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Categories from "../../Data/Categories";
 import "./Home.css";
 import quiz from '../../images/quiz.svg';
-
+import blog from '../../images/loginplz.svg';
+import useStyles from './styles';
 const QuizHome = ({ fetchQuestions }) => {
   
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
-
+  const classes = useStyles();
   const theme=createMuiTheme({
   
     typography:{
@@ -28,6 +29,19 @@ const QuizHome = ({ fetchQuestions }) => {
   if (!user) {
     return <Redirect to="/auth" />
   }
+  // if (!user?.result?.name) {
+  //   return (
+  //     <ThemeProvider theme={theme}>
+  //     <Paper className={classes.paper1} elevation={6}>
+  //       <Typography variant="h6" align="center" >
+  //         Please Sign In to explore more features!
+  //       </Typography>
+  //       <img  src={blog} className="banner" alt="quiz app" padding='100px' height="100vh" width='100vh'/>
+
+  //     </Paper>
+  //     </ThemeProvider>
+  //   );
+  // }
   const handleSubmit = () => {
     if (!category || !difficulty ) {
       setError(true);

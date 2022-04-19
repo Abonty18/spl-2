@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '9px 50px',
+    padding: '3px 50px',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
@@ -72,7 +72,7 @@ export default makeStyles((theme) => ({
 
     alignItems:'center',
     fontWeight:'bolder',
-    fontSize:'33px',
+    fontSize:'25px',
     color:'#6a329f',
     fontFamily:'Bubblegum Sans', 
 
@@ -82,7 +82,7 @@ export default makeStyles((theme) => ({
 
    alignItems:'center',
    fontWeight:'bolder',
-    fontSize:'33px',
+    fontSize:'25px',
     color:'#6a329f',
     fontFamily:'Bubblegum Sans', 
     // border: '3px solid rgb(148, 113, 172)',
@@ -93,7 +93,7 @@ export default makeStyles((theme) => ({
 
         alignItems:'center',
         fontWeight:'bolder',
-         fontSize:'33px',
+         fontSize:'25px',
          color:'#6a329f',
          fontFamily:'Bubblegum Sans', 
          
