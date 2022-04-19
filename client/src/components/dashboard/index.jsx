@@ -24,19 +24,8 @@ const Dashboard = () => {
   const [error, setError] = useState(false);
   const history = useHistory();
   const user = JSON.parse(localStorage.getItem('profile'));
-  if (!user?.result?.name) {
-    return (
-      <ThemeProvider theme={theme}>
-      
-      <Paper className='paper1' elevation={6}>
-        <Typography variant="h6" align="center">
-          Please Sign In to explore more features!
-        </Typography>
-        <img  src={blog} className="banner" alt="quiz app" padding='100px' height="100vh" width='100vh'/>
-
-      </Paper>
-      </ThemeProvider>
-    );
+  if (!user) {
+    return <Redirect to="/auth" />
   }
   const handleSubmit = () => {
     if (!user ) {
